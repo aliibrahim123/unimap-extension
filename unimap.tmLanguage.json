@@ -24,33 +24,46 @@
 			]
 		},
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.unimap",
-				"match": "(?<=^|\\s|[.:,;=|/(){}\\[\\]])(fn|let|import|symbol)(?=\\s|[.:,;=|/(){}\\[\\]])"
-			}]
+			"patterns": [
+				{
+					"name": "storage.type.function.unimap",
+					"match": "(?<=^|\\s|[.:,;=|/(){}\\[\\]])(fn)(?=\\s|[.:,;=|/(){}\\[\\]]|$)"
+				},
+				{
+					"name": "storage.type.unimap",
+					"match": "(?<=^|\\s|[.:,;=|/(){}\\[\\]])(let|symbol)(?=\\s|[.:,;=|/(){}\\[\\]]|$)"
+				},
+				{
+					"name": "keyword.control.import.unimap",
+					"match": "(?<=^|\\s|[.:,;=|/(){}\\[\\]])(import)(?=\\s|[.:,;=|/(){}\\[\\]]|$)"
+				}
+			]
 		},
 		"operators": {
 			"patterns": [
 				{
-					"match": "=",
-					"name": "keyword.operator.assignment.unimap"
+					"match": "_",
+					"name": "keyword.operator.dash.unimap"
 				}, {
 					"match": "=>",
 					"name": "keyword.operator.arrow.unimap"
 				}, {
+					"match": "=",
+					"name": "keyword.operator.assignment.unimap"
+				},  {
 		  			"match": "\\|>",
 					"name": "keyword.operator.pipeline.unimap"
 				}, {
 					"match": "\\.\\.",
 					"name": "keyword.operator.spread.unimap"
 				}, {
-					"match": ".",
+					"match": "\\.",
 					"name": "keyword.operator.dot.unimap"
 				}, {
 					"match": ":",
 					"name": "keyword.operator.colon.unimap"
 				}, {
-					"match": "|",
+					"match": "\\|",
 					"name": "keyword.operator.or.unimap"
 				}
 			]
@@ -58,42 +71,36 @@
 		"punctuation": {
 			"patterns": [
 				{
-					"match": "{",
+					"match": "\\{",
 					"name": "punctuation.brackets.curly.start.unimap"
 				}, {
-					"match": "}",
-					"name": "punctuation.brackets.curly.start.unimap"
+					"match": "\\}",
+					"name": "punctuation.brackets.curly.end.unimap"
 				}, {
-					"match": "[",
+					"match": "\\[",
 					"name": "punctuation.brackets.square.start.unimap"
 				}, {
-					"match": "]",
-					"name": "punctuation.brackets.square.start.unimap"
+					"match": "\\]",
+					"name": "punctuation.brackets.square.end.unimap"
 				}, {
-					"match": "(",
+					"match": "\\(",
 					"name": "punctuation.brackets.round.start.unimap"
 				}, {
-					"match": ")",
-					"name": "punctuation.brackets.round.start.unimap"
+					"match": "\\)",
+					"name": "punctuation.brackets.round.end.unimap"
 				}, {
         			"match": ",",
         			"name": "punctuation.separator.comma.unimap"
         		}, {
         			"match": ";",
         			"name": "punctuation.separator.semicolon.unimap"
-        		}, {
-        			"match": ",",
-        			"name": "punctuation.separator.unimap"
-        		}, {
-        			"match": ",",
-        			"name": "punctuation.separator.unimap"
         		}
 			]
 		},
 		"nb": {
 			"patterns": [{
 				"name": "constant.numeric.unimap",
-				"match": "(?<=^|\\s|[.:,;=|/(){}\\[\\]])((?![.:,;=|/(){}\\[\\]])[0-9]+(?=\\s|[.:,;=|/(){}\\[\\]]"
+				"match": "(?<=^|\\s|[.:,;=|/(){}\\[\\]])[0-9]+(?=\\s|[.:,;=|/(){}\\[\\]]|$)"
 			}]
 		},
 		"identifiers": {
