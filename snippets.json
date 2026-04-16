@@ -1,0 +1,18 @@
+{
+	"fn": {
+		"prefix": "fn",
+		"body": "fn"
+	},
+	"import": {
+		"prefix": "import",
+		"body": "import"
+	},
+	"let": {
+		"prefix": "let",
+		"body": "let"
+	},
+	"symbol": {
+		"prefix": "symbol",
+		"body": "symbol"
+	}
+}

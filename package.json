@@ -1,0 +1,34 @@
+{
+	"name": "unimap",
+	"displayName": "unimap",
+	"description": "Language support for unimap",
+	"version": "0.0.1",
+	"type": "module",
+	"engines": {
+		"vscode": "^1.70.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [{
+			"id": "unimap",
+			"aliases": ["unimap", "stom"],
+			"extensions": [".unim"],
+			"configuration": "./language.json"
+		}],
+		"grammars": [{
+			"language": "unimap",
+			"scopeName": "source.unimap",
+			"path": "./unimap.tmLanguage.json"
+		}],
+		"snippets": [{
+			"language": "unimap",
+			"path": "./snippets.json"
+		}]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/aliibrahim123/unimap-extension.git"
+	}
+}
